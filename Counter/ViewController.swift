@@ -10,9 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var count:Int = 0
+    
+    @IBOutlet weak var myCount: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +27,20 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func btClick(_ sender: Any) {
+    
+        count = count + 1
+        print("nayeon\(count)")
+        
+        myCount.text = String(count)
+        
+        
+    }
+    
+    @IBAction func btReset(_ sender: Any) {
+        count = 0
+        myCount.text = String(count)
+    }
+    
 }
 
